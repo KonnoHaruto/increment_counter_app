@@ -17,6 +17,7 @@ dependencies:
   flutter_riverpod: ^0.14.0+3
   flutter_state_notifier: ^0.7.0
   freezed_annotation: ^0.14.2
+  pedantic_mono: ^1.14.0
 
 dev_dependencies:
   flutter_test:
