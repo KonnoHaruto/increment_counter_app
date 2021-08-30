@@ -13,99 +13,80 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$HomePageStateTearOff {
-  const _$HomePageStateTearOff();
+class _$CounterTearOff {
+  const _$CounterTearOff();
 
-  _HomePageState call({int mainCount = 0, int subCount = 0}) {
-    return _HomePageState(
-      mainCount: mainCount,
-      subCount: subCount,
+  Counter call({int counter = 0}) {
+    return Counter(
+      counter: counter,
     );
   }
 }
 
 /// @nodoc
-const $HomePageState = _$HomePageStateTearOff();
+const $Counter = _$CounterTearOff();
 
 /// @nodoc
-mixin _$HomePageState {
-  int get mainCount => throw _privateConstructorUsedError;
-  int get subCount => throw _privateConstructorUsedError;
+mixin _$Counter {
+  int get counter => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $HomePageStateCopyWith<HomePageState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CounterCopyWith<Counter> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $HomePageStateCopyWith<$Res> {
-  factory $HomePageStateCopyWith(
-          HomePageState value, $Res Function(HomePageState) then) =
-      _$HomePageStateCopyWithImpl<$Res>;
-  $Res call({int mainCount, int subCount});
+abstract class $CounterCopyWith<$Res> {
+  factory $CounterCopyWith(Counter value, $Res Function(Counter) then) =
+      _$CounterCopyWithImpl<$Res>;
+  $Res call({int counter});
 }
 
 /// @nodoc
-class _$HomePageStateCopyWithImpl<$Res>
-    implements $HomePageStateCopyWith<$Res> {
-  _$HomePageStateCopyWithImpl(this._value, this._then);
+class _$CounterCopyWithImpl<$Res> implements $CounterCopyWith<$Res> {
+  _$CounterCopyWithImpl(this._value, this._then);
 
-  final HomePageState _value;
+  final Counter _value;
   // ignore: unused_field
-  final $Res Function(HomePageState) _then;
+  final $Res Function(Counter) _then;
 
   @override
   $Res call({
-    Object? mainCount = freezed,
-    Object? subCount = freezed,
+    Object? counter = freezed,
   }) {
     return _then(_value.copyWith(
-      mainCount: mainCount == freezed
-          ? _value.mainCount
-          : mainCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      subCount: subCount == freezed
-          ? _value.subCount
-          : subCount // ignore: cast_nullable_to_non_nullable
+      counter: counter == freezed
+          ? _value.counter
+          : counter // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
 }
 
 /// @nodoc
-abstract class _$HomePageStateCopyWith<$Res>
-    implements $HomePageStateCopyWith<$Res> {
-  factory _$HomePageStateCopyWith(
-          _HomePageState value, $Res Function(_HomePageState) then) =
-      __$HomePageStateCopyWithImpl<$Res>;
+abstract class $CounterCopyWith<$Res> implements $CounterCopyWith<$Res> {
+  factory $CounterCopyWith(Counter value, $Res Function(Counter) then) =
+      _$CounterCopyWithImpl<$Res>;
   @override
-  $Res call({int mainCount, int subCount});
+  $Res call({int counter});
 }
 
 /// @nodoc
-class __$HomePageStateCopyWithImpl<$Res>
-    extends _$HomePageStateCopyWithImpl<$Res>
-    implements _$HomePageStateCopyWith<$Res> {
-  __$HomePageStateCopyWithImpl(
-      _HomePageState _value, $Res Function(_HomePageState) _then)
-      : super(_value, (v) => _then(v as _HomePageState));
+class _$CounterCopyWithImpl<$Res> extends _$CounterCopyWithImpl<$Res>
+    implements $CounterCopyWith<$Res> {
+  _$CounterCopyWithImpl(Counter _value, $Res Function(Counter) _then)
+      : super(_value, (v) => _then(v as Counter));
 
   @override
-  _HomePageState get _value => super._value as _HomePageState;
+  Counter get _value => super._value as Counter;
 
   @override
   $Res call({
-    Object? mainCount = freezed,
-    Object? subCount = freezed,
+    Object? counter = freezed,
   }) {
-    return _then(_HomePageState(
-      mainCount: mainCount == freezed
-          ? _value.mainCount
-          : mainCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      subCount: subCount == freezed
-          ? _value.subCount
-          : subCount // ignore: cast_nullable_to_non_nullable
+    return _then(Counter(
+      counter: counter == freezed
+          ? _value.counter
+          : counter // ignore: cast_nullable_to_non_nullable
               as int,
     ));
   }
@@ -113,55 +94,42 @@ class __$HomePageStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_HomePageState implements _HomePageState {
-  const _$_HomePageState({this.mainCount = 0, this.subCount = 0});
+class _$Counter implements Counter {
+  const _$Counter({this.counter = 0});
 
   @JsonKey(defaultValue: 0)
   @override
-  final int mainCount;
-  @JsonKey(defaultValue: 0)
-  @override
-  final int subCount;
+  final int counter;
 
   @override
   String toString() {
-    return 'HomePageState(mainCount: $mainCount, subCount: $subCount)';
+    return 'Counter(counter: $counter)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _HomePageState &&
-            (identical(other.mainCount, mainCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.mainCount, mainCount)) &&
-            (identical(other.subCount, subCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.subCount, subCount)));
+        (other is Counter &&
+            (identical(other.counter, counter) ||
+                const DeepCollectionEquality().equals(other.counter, counter)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(mainCount) ^
-      const DeepCollectionEquality().hash(subCount);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(counter);
 
   @JsonKey(ignore: true)
   @override
-  _$HomePageStateCopyWith<_HomePageState> get copyWith =>
-      __$HomePageStateCopyWithImpl<_HomePageState>(this, _$identity);
+  $CounterCopyWith<Counter> get copyWith =>
+      _$CounterCopyWithImpl<Counter>(this, _$identity);
 }
 
-abstract class _HomePageState implements HomePageState {
-  const factory _HomePageState({int mainCount, int subCount}) =
-      _$_HomePageState;
+abstract class Counter implements Counter {
+  const factory Counter({int counter}) = _$Counter;
 
   @override
-  int get mainCount => throw _privateConstructorUsedError;
-  @override
-  int get subCount => throw _privateConstructorUsedError;
+  int get counter => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$HomePageStateCopyWith<_HomePageState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CounterCopyWith<Counter> get copyWith => throw _privateConstructorUsedError;
 }
