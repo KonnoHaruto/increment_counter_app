@@ -20,7 +20,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   pedantic_mono: ^1.14.0
-  build_runner: ^2.1.1
+  build_runner: ^2.0.6
   freezed: ^0.14.2
 
 
