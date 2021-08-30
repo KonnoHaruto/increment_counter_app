@@ -6,5 +6,5 @@ part 'home_page_state.freezed.dart';
 class Counter with _$Counter {
   const factory Counter({
     @Default(0) int counter,
-  }) = Counter;
+  }) = _Counter;
 }

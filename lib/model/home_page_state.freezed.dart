@@ -16,8 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$CounterTearOff {
   const _$CounterTearOff();
 
-  Counter call({int counter = 0}) {
-    return Counter(
+  _Counter call({int counter = 0}) {
+    return _Counter(
       counter: counter,
     );
   }
@@ -63,27 +63,27 @@ class _$CounterCopyWithImpl<$Res> implements $CounterCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $CounterCopyWith<$Res> implements $CounterCopyWith<$Res> {
-  factory $CounterCopyWith(Counter value, $Res Function(Counter) then) =
-      _$CounterCopyWithImpl<$Res>;
+abstract class _$CounterCopyWith<$Res> implements $CounterCopyWith<$Res> {
+  factory _$CounterCopyWith(_Counter value, $Res Function(_Counter) then) =
+      __$CounterCopyWithImpl<$Res>;
   @override
   $Res call({int counter});
 }
 
 /// @nodoc
-class _$CounterCopyWithImpl<$Res> extends _$CounterCopyWithImpl<$Res>
-    implements $CounterCopyWith<$Res> {
-  _$CounterCopyWithImpl(Counter _value, $Res Function(Counter) _then)
-      : super(_value, (v) => _then(v as Counter));
+class __$CounterCopyWithImpl<$Res> extends _$CounterCopyWithImpl<$Res>
+    implements _$CounterCopyWith<$Res> {
+  __$CounterCopyWithImpl(_Counter _value, $Res Function(_Counter) _then)
+      : super(_value, (v) => _then(v as _Counter));
 
   @override
-  Counter get _value => super._value as Counter;
+  _Counter get _value => super._value as _Counter;
 
   @override
   $Res call({
     Object? counter = freezed,
   }) {
-    return _then(Counter(
+    return _then(_Counter(
       counter: counter == freezed
           ? _value.counter
           : counter // ignore: cast_nullable_to_non_nullable
@@ -94,8 +94,8 @@ class _$CounterCopyWithImpl<$Res> extends _$CounterCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$Counter implements Counter {
-  const _$Counter({this.counter = 0});
+class _$_Counter implements _Counter {
+  const _$_Counter({this.counter = 0});
 
   @JsonKey(defaultValue: 0)
   @override
@@ -109,7 +109,7 @@ class _$Counter implements Counter {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is Counter &&
+        (other is _Counter &&
             (identical(other.counter, counter) ||
                 const DeepCollectionEquality().equals(other.counter, counter)));
   }
@@ -120,16 +120,17 @@ class _$Counter implements Counter {
 
   @JsonKey(ignore: true)
   @override
-  $CounterCopyWith<Counter> get copyWith =>
-      _$CounterCopyWithImpl<Counter>(this, _$identity);
+  _$CounterCopyWith<_Counter> get copyWith =>
+      __$CounterCopyWithImpl<_Counter>(this, _$identity);
 }
 
-abstract class Counter implements Counter {
-  const factory Counter({int counter}) = _$Counter;
+abstract class _Counter implements Counter {
+  const factory _Counter({int counter}) = _$_Counter;
 
   @override
   int get counter => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  $CounterCopyWith<Counter> get copyWith => throw _privateConstructorUsedError;
+  _$CounterCopyWith<_Counter> get copyWith =>
+      throw _privateConstructorUsedError;
 }
