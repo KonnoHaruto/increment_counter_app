@@ -25,6 +25,12 @@ class HomePage extends ConsumerWidget {
           children: <Widget>[
             const Text('You have pushed the button this many times:'),
             Text('$counter', style: const TextStyle(fontSize: 50)),
+            ElevatedButton(
+              onPressed: () => {
+                viewModel.decrement(),
+              },
+              child: const Text('decrement'),
+            ),
           ],
         ),
       ),
@@ -32,8 +38,9 @@ class HomePage extends ConsumerWidget {
         onPressed: () => {
           viewModel.increment(),
         },
+        tooltip: 'increment!',
         child: const Icon(Icons.add),
-        ),
+      ),
     );
   }
 }

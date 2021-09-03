@@ -17,4 +17,9 @@ class HomePageNotifier extends StateNotifier<Counter> {
   void increment() {
     state = state.copyWith(counter: state.counter + 1);
   }
+
+  //カウンターをデクリメント
+  void decrement() {
+    state = state.copyWith(counter: state.counter - 1);
+  }
 }
