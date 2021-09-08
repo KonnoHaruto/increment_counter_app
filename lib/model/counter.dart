@@ -1,6 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-
-part 'home_page_state.freezed.dart';
+part 'counter.freezed.dart';
 
 @freezed
 class Counter with _$Counter {

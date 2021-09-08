@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'view/home_page.dart';
+import 'view/home_page_view.dart';
 
 void main() {
   runApp(

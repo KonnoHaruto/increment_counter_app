@@ -1,17 +1,17 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:increment_counter_app/model/home_page_state.dart';
+import 'package:increment_counter_app/model/counter.dart';
 
 //Providerの定数をグローバルに宣言
 //StateNotifierProviderに続けてNotifierクラスの型と、格納する状態の型を明示する
 final counterProvider =
     //autoDispose修飾子でProviderを破棄
-    StateNotifierProvider.autoDispose<HomePageNotifier, Counter>(
-  (ref) => HomePageNotifier(),
+    StateNotifierProvider.autoDispose<HomePageViewModel, Counter>(
+  (ref) => HomePageViewModel(),
 );
 
-class HomePageNotifier extends StateNotifier<Counter> {
+class HomePageViewModel extends StateNotifier<Counter> {
   //コンストラクター
-  HomePageNotifier() : super(const Counter());
+  HomePageViewModel() : super(const Counter());
 
   //カウンターををインクリメント
   void increment() {
