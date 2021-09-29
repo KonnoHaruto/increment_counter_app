@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../view_model/home_page_view_model.dart';
+
+final counterProvider = StateProvider((ref) => 0);
 
 class HomePage extends ConsumerWidget {
   const HomePage({Key? key}) : super(key: key);
