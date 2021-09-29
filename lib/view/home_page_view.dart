@@ -16,6 +16,7 @@ class HomePage extends ConsumerWidget {
     // final counter = state.counter;
 
     final counter = watch(counterProvider);
+    final count = counter.state;
 
     return Scaffold(
       appBar: AppBar(
@@ -26,12 +27,12 @@ class HomePage extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text('You have pushed the button this many times:'),
-            Text('$counter',
+            Text('$count',
                 style: const TextStyle(
                   fontSize: 50,
                 )),
             ElevatedButton(
-              onPressed: () => counter.state - 1,
+              onPressed: () => counter.state--,
               child: const Text('decrement'),
             ),
           ],
